@@ -10,7 +10,6 @@ import './Styles/global.scss'
 
 // 頁面用元件
 import Home from './pages/Home/Home'
-import AdoptList from './pages/AdoptList'
 // import ProductList from './pages/ProductList'
 import ProductDog from './pages/ProductDog'
 import ProductCat from './pages/ProductCat'
@@ -18,7 +17,7 @@ import ProductListCatFood from './components/ProductListCatFood'
 import ProductListCatToilet from './components/ProductListCatToilet'
 import ProductListCatHealth from './components/ProductListCatHealth'
 import ProductListCatOutdoor from './components/ProductListCatOutdoor'
-import HotelList from './pages/HotelList'
+
 import BlogList from './pages/BlogList/BlogList'
 import BlogArticle1 from './pages/BlogArticle/BlogArticle1'
 import SignUp from './pages/sign-up/SignUp'
@@ -28,6 +27,10 @@ import Member from './pages/member/Member'
 import LuCartConfirmPage from './pages/ShoppingCart/LuCartConfirmPage'
 import LuCheckoutPage from './pages/ShoppingCart/LuCheckoutPage'
 import NotFoundPage from './pages/NotFoundPage'
+import AdoptList from './pages/AdoptList/AdoptList'
+import AdoptPage from './pages/AdoptPage/AdoptPage'
+import HotelPage from './pages/HotelPage/HotelPage'
+import HotelList from './pages/HotelList/HotelList'
 
 // 組合用元件
 import MyNavbar from './components/MyNavbar'
@@ -81,8 +84,20 @@ function App(props) {
           {/* 切換顯示的元件畫面放在這下面 */}
           {/* ScrollToTop是為了讓連到另一頁內容時，頁面回到最上方 */}
           <ScrollToTop>
-            <AuthHeader setAuth={setAuth} />
+            {/* <AuthHeader setAuth={setAuth} /> */}
             <Switch>
+              <Route path="/adoptlist/adoptpage/:id?">
+                <AdoptPage />
+              </Route>
+              <Route path="/hotellist/hotelpage/:id?">
+                <HotelPage />
+              </Route>
+              <Route path="/adoptlist/">
+                <AdoptList />
+              </Route>
+              <Route path="/hotellist">
+                <HotelList />
+              </Route>
               <Route path="/bloglist/blogarticle1">
                 <BlogArticle1 />
               </Route>
