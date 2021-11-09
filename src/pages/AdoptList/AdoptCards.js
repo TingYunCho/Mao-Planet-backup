@@ -38,7 +38,7 @@ const AdoptCards = () => {
         <div className="MKALlist">
           {paginatedPosts.map((v, i) => {
             return (
-              <p key={i} className="MKDisplayLi">
+              <p key={i} className="MKDisplayLi col-12 col-md-4">
                 <div className=" MKALcard ">
                   <div className="MKALcard-context">
                     <div className="MKALavatar">
