@@ -9,7 +9,7 @@ import '../Styles/HomeAdoptCard.scss'
 function PCHomeAdoptCard() {
   return (
     <>
-      <div className="col-12 d-md-block d-none">
+      <div className="col-12 d-md-block d-none mt-5">
         <div className="d-flex justify-content-center mx-auto">
           <div>
             <Card className="ACadoptCard p-1 mx-3">
